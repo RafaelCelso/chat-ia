@@ -64,7 +64,7 @@ export default function Chat() {
     setAttachments([]);
 
     try {
-      const response = await fetch('http://localhost:8000/chat', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/chat`, {
         method: 'POST',
         body: formData,
       });
